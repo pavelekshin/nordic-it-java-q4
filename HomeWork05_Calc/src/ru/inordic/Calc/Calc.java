@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class Calc {
 
-	public static boolean checkDigitInput(String str) {
+	public static boolean checkDigitInput(String inputstr) {
 		try {
-			Double.valueOf(str);
+			Integer.valueOf(inputstr);
 			return true;
 		} catch (NumberFormatException e) {
-			System.out.println("This is not a double type!");
+			System.out.println("This is not a int type!");
 			return false;
 		}
 	}
@@ -21,16 +21,16 @@ public class Calc {
 			return false;
 	}
 
-	public static double sum(double arg1, double arg2) {
+	public static int sum(int arg1, int arg2) {
 		return arg1 + arg2;
 	}
 
-	public static double sub(double arg1, double arg2) {
+	public static int sub(int arg1, int arg2) {
 		return arg1 - arg2;
 	}
 
-	public static double pow(double arg1, double arg2) {
-		double pow = 1;
+	public static int pow(int arg1, int arg2) {
+		int pow = 1;
 		if (arg2 > 0) {
 			for (int i = 1; i <= arg2; i++) {
 				pow *= arg1;
@@ -42,31 +42,31 @@ public class Calc {
 			return pow = 0;
 	}
 
-	public static int divideInt(double arg1, double arg2) {
-		return (int) arg1 / (int) arg2;
+	public static int div(int arg1, int arg2) {
+		return arg1 / arg2;
 	}
 
-	public static double mod(double arg1, double arg2) {
+	public static int mod(int arg1, int arg2) {
 		return arg1 % arg2;
 	}
 
-	public static double multipli(double arg1, double arg2) {
+	public static int multipli(int arg1, int arg2) {
 		return arg1 * arg2;
 	}
 
-	public static double divide(double arg1, double arg2) {
-		return arg1 / arg2;
+	public static double divide(int arg1, int arg2) {
+		return (double) arg1/arg2;
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		double arg1 = 0;
-		double arg2 = 0;
+		int arg1 = 0;
+		int arg2 = 0;
 		String argOper = "";
 
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("The code make math operations on DOUBLE type value.");
+		System.out.println("The code make math operations on INTEGER type value.");
 
 		boolean running = true;
 
@@ -75,7 +75,7 @@ public class Calc {
 			String digit1 = scanner.nextLine();
 			if (checkDigitInput(digit1)) {
 				running = false;
-				arg1 = Double.parseDouble(digit1);
+				arg1 = Integer.parseInt(digit1);
 			}
 		}
 
@@ -86,7 +86,7 @@ public class Calc {
 			String digit2 = scanner.nextLine();
 			if (checkDigitInput(digit2)) {
 				running = false;
-				arg2 = Double.parseDouble(digit2);
+				arg2 = Integer.parseInt(digit2);
 			}
 		}
 
@@ -97,7 +97,7 @@ public class Calc {
 			String operator = scanner.nextLine().toLowerCase();
 			if (checkOperator(operator)) {
 				if ((operator.equals("/") && arg2 == 0) || (operator.equals("div") && arg2 == 0)) {
-					System.out.println("You cannot divide by zero!!!. Please enter another operator.");
+					System.out.println("You cannot divide by zero!!! Please enter another operator");
 				} else {
 					running = false;
 					argOper = operator;
@@ -119,7 +119,7 @@ public class Calc {
 			System.out.println("Divide of entered digits: " + divide(arg1, arg2));
 			break;
 		case "div":
-			System.out.println("Div of entered digits: " + divideInt(arg1, arg2));
+			System.out.println("Div of entered digits: " + div(arg1, arg2));
 			break;
 		case "mod":
 			System.out.println("Mod of entered digits: " + mod(arg1, arg2));
