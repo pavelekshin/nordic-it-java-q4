@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class Calc {
 
 
-public static boolean checkEnters(String str) {
+public static boolean checkDigitInput(String str) {
 	    try {
 	        Double.valueOf(str);
 	        return true;
 	    } catch (NumberFormatException e) {
+	    	System.out.println("This is not a double type!");
 	        return false;
 	    }
-
 }	
 
 public static boolean checkOperator (String operator) {
@@ -22,7 +22,6 @@ else
 	return false;
 }
 
-
 public static double sum (double arg1, double arg2) {
 	return arg1+arg2;
 }
@@ -30,7 +29,6 @@ public static double sum (double arg1, double arg2) {
 public static double sub (double arg1, double arg2) {
 	return arg1-arg2;
 }
-
 
 public static double pow (double arg1, double arg2) {
 	double pow = 0;
@@ -46,9 +44,7 @@ public static double pow (double arg1, double arg2) {
 	else return pow;
 }
 
-
 public static int divideInt (double arg1, double arg2) {
-	
 	return (int)arg1/(int)arg2;
 }
 
@@ -79,7 +75,7 @@ public static void main(String[] args) {
 		while (running) {	
 		System.out.println("Please enter first digit in new line:");
 		String digit1 = scanner.nextLine();
-		if (checkEnters(digit1)) {
+		if (checkDigitInput(digit1)) {
 			running = false;
 			arg1 = Double.parseDouble(digit1);
 			}
@@ -90,7 +86,7 @@ public static void main(String[] args) {
 		while (running) {	
 			System.out.println("Please enter second digit in new line:");
 			String  digit2 = scanner.nextLine();
-			if (checkEnters(digit2)) {
+			if (checkDigitInput(digit2)) {
 				running = false;
 				arg2 = Double.parseDouble(digit2);
 			}
@@ -100,10 +96,10 @@ public static void main(String[] args) {
 
 		while (running) {	
 			System.out.println("Enter math operator (+,-,/,*,^,div,mod) in new line:");
-			String operator = scanner.nextLine();
+			String operator = scanner.nextLine().toLowerCase();
 			if (checkOperator(operator)) {
 				if ((operator.equals("/") && arg2 == 0) || (operator.equals("div") && arg2 == 0) ){
-					System.out.println("You cannot divide by zero!. Please run software again.");
+					System.out.println("You cannot divide by zero!!!. Please enter another operator.");
 				}
 				else {
 					running = false;
