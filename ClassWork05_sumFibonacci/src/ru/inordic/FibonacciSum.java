@@ -6,26 +6,25 @@ public class FibonacciSum {
 
 	public static void main(String[] args) {
 
-		System.out.println("Введите границу цикла [0,n)");
+		System.out.println("Введите с новой строки число n>1 для расчета суммы числе Фибоначчи Fn = F(n-1) + F(n-2)");
 		Scanner scanner = new Scanner(System.in);
-		
+				
 		int n = scanner.nextInt();
 		scanner.close();
 		
-		int sum = 0;
+		System.out.print("Сумма чисел Фибоначчи: " +F(n));
+	
+	}
+	
+	public static int F(int n) {
 		
-		for (int i=0; i <= n; i++)
-		{
-			if (i % 2 == 0) {
-				sum +=i;
-			}
-			else {
-		}
-			
+		if (n <= 0)
+			return 0;
+		else if (n == 1) {
+			return 1;
 		}
 		
-		System.out.println("Сумма четных чисел: " +sum);
-
+		return F(n-1) + F(n-2);
 	}
 
 }
