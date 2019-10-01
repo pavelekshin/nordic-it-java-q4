@@ -2,7 +2,7 @@ package ru.inordic;
 
 import java.util.Scanner;
 
-public class FibonacciSum {
+public class sumInterval {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
