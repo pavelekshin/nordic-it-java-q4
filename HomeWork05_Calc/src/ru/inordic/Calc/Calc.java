@@ -33,7 +33,8 @@ public class Calc {
 		double pow = 1;
 		if (arg2 > 0) {
 			for (int i = 1; i <= arg2; i++) {
-				pow *= arg1; }
+				pow *= arg1;
+			}
 			return pow;
 		} else if (arg2 == 0) {
 			return pow;
