@@ -30,16 +30,15 @@ public class Calc {
 	}
 
 	public static double pow(double arg1, double arg2) {
-		double pow = 0;
+		double pow = 1;
 		if (arg2 > 0) {
-			for (int i = 1; i < arg2; i++) {
-				pow = arg1 *= arg1;
-			}
+			for (int i = 1; i <= arg2; i++) {
+				pow *= arg1; }
 			return pow;
 		} else if (arg2 == 0) {
-			return pow = 1;
-		} else
 			return pow;
+		} else
+			return pow = 0;
 	}
 
 	public static int divideInt(double arg1, double arg2) {
