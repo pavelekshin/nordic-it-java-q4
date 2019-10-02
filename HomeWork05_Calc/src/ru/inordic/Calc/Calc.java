@@ -13,6 +13,16 @@ public class Calc {
 			return false;
 		}
 	}
+	
+	public static boolean checkDigitInputStr(String inputstr) {
+		if (inputstr.matches("[0-9]+"))
+			return true;
+		else {
+			System.out.println("This is not a int type!");
+			return false;
+		}
+	}
+
 
 	public static boolean checkOperator(String operator) {
 		if (operator.matches("[-+*^/]|mod|div"))
@@ -73,7 +83,7 @@ public class Calc {
 		while (running) {
 			System.out.println("Please enter first digit in new line:");
 			String digit1 = scanner.nextLine();
-			if (checkDigitInput(digit1)) {
+			if (checkDigitInputStr(digit1)) {
 				running = false;
 				arg1 = Integer.parseInt(digit1);
 			}
@@ -84,7 +94,7 @@ public class Calc {
 		while (running) {
 			System.out.println("Please enter second digit in new line:");
 			String digit2 = scanner.nextLine();
-			if (checkDigitInput(digit2)) {
+			if (checkDigitInputStr(digit2)) {
 				running = false;
 				arg2 = Integer.parseInt(digit2);
 			}
