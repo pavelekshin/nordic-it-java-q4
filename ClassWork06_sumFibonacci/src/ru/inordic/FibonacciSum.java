@@ -17,10 +17,12 @@ public class FibonacciSum {
 
 		for (int i = 0; i < n; i++) {
 			arr[i] += F(i);
-			sum += arr[i];
 		}
-
+		
+		sum = arr[n-1]+arr[n-2];
+		
 		System.out.println("Сумма чисел Фибоначчи: " + sum);
+		System.out.println("Сумма чисел Фибоначчи: " + F(n));
 
 		for (int i = 0; i < n; i++) {
 			System.out.print(arr[i] + " ");
@@ -29,7 +31,6 @@ public class FibonacciSum {
 	}
 
 	public static int F(int n) {
-
 		if (n <= 0)
 			return 0;
 		else if (n == 1) {
