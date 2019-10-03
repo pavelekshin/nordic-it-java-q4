@@ -14,16 +14,14 @@ public class Recurcy {
 		int n = scanner.nextInt();
 		scanner.close();
 
-	
-		System.out.println(n+"!: " +Recurcy(n));
+		System.out.println(n + "!: " + Recurcy(n));
 
 	}
 
-		
-	public static int Recurcy (int n) {
-		  if (n == 0 || n == 1) 
-			  return 1;
-		    return n * Recurcy(n - 1);
+	public static int Recurcy(int n) {
+		if (n == 0 || n == 1)
+			return 1;
+		return n * Recurcy(n - 1);
 	}
 
 }
