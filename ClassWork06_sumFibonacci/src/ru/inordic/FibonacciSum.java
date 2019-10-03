@@ -1,5 +1,6 @@
 package ru.inordic;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -32,14 +33,19 @@ public class FibonacciSum {
 
 		System.out.print("\n");
 
-		// TODO
+		// TODO Array
 		int Farrsum = 0;
 		Farrsum = getArrayElement(Farr(n), n - 1) + getArrayElement(Farr(n), n - 2);
 
 		System.out.println("Функция Farr: " + Arrays.toString(Farr(n)));
 		System.out.println("Функция Farrsum: " + Farrsum);
-	
+
 		// TODO ArrayList
+		int Farrlist = 0;
+		
+		Farrlist = FarrList(n).get(n-1) + FarrList(n).get(n-2);
+		System.out.println("Функция FarrList: " + FarrList(n));
+		System.out.println("Функция Farrlist sum: " +Farrlist);
 
 	}
 
@@ -64,6 +70,21 @@ public class FibonacciSum {
 				arr[i] += arr[i - 1] + arr[i - 2];
 		}
 		return arr;
+	}
+
+	public static ArrayList<Integer> FarrList (int n) {
+
+		ArrayList<Integer> list = new ArrayList<Integer>(n);
+
+		for (int i = 0; i < n; i++) {
+			if (i <= 0)
+				list.add(i);
+			else if (i == 1)
+				list.add(i);
+			else
+				list.add(i,list.get(i-1)+list.get(i-2));
+		}
+		return list;
 	}
 
 	public static int getArrayElement(int[] arr, int index) {
