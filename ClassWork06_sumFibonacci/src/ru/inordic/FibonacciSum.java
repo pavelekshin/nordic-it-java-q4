@@ -12,7 +12,7 @@ public class FibonacciSum {
 
 		int n = scanner.nextInt();
 		scanner.close();
-		
+
 		int[] arr = new int[n];
 
 		int sum = 0;
@@ -25,21 +25,21 @@ public class FibonacciSum {
 
 		System.out.println("Сумма чисел Фибоначчи: " + sum);
 		System.out.println("Сумма чисел Фибоначчи: " + F(n));
-		
 
 		for (int i = 0; i < n; i++) {
 			System.out.print(arr[i] + " ");
 		}
-		
+
 		System.out.print("\n");
 
-		//TODO
+		// TODO
 		int Farrsum = 0;
-		Farrsum = getArrayElement(Farr(n),n-1) + getArrayElement(Farr(n),n-2);
+		Farrsum = getArrayElement(Farr(n), n - 1) + getArrayElement(Farr(n), n - 2);
 
 		System.out.println("Функция Farr: " + Arrays.toString(Farr(n)));
 		System.out.println("Функция Farrsum: " + Farrsum);
-
+	
+		// TODO ArrayList
 
 	}
 
@@ -56,13 +56,13 @@ public class FibonacciSum {
 		int[] arr = new int[n];
 
 		for (int i = 0; i < n; i++) {
-			if (i <= 0) 
+			if (i <= 0)
 				arr[i] = i;
 			else if (i == 1)
 				arr[i] = i;
 			else
-			arr[i] += arr[i - 1] + arr[i - 2];
-			}
+				arr[i] += arr[i - 1] + arr[i - 2];
+		}
 		return arr;
 	}
 
