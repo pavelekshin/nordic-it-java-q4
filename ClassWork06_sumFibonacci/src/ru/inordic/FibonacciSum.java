@@ -62,9 +62,7 @@ public class FibonacciSum {
 		int[] arr = new int[n];
 
 		for (int i = 0; i < n; i++) {
-			if (i <= 0)
-				arr[i] = i;
-			else if (i == 1)
+			if (i <= 0 || i == 1)
 				arr[i] = i;
 			else
 				arr[i] += arr[i - 1] + arr[i - 2];
@@ -77,9 +75,7 @@ public class FibonacciSum {
 		ArrayList<Integer> list = new ArrayList<Integer>(n);
 
 		for (int i = 0; i < n; i++) {
-			if (i <= 0)
-				list.add(i);
-			else if (i == 1)
+			if (i <= 0 || i == 1)
 				list.add(i);
 			else
 				list.add(i,list.get(i-1)+list.get(i-2));
