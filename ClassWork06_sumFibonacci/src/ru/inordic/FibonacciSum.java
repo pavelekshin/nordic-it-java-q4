@@ -77,8 +77,10 @@ public class FibonacciSum {
 		for (int i = 0; i < n; i++) {
 			if (i <= 0 || i == 1)
 				list.add(i);
-			else
-				list.add(i,list.get(i-1)+list.get(i-2));
+			else {
+				var a = list.get(i-1);
+				var b = list.get(i-2);
+				list.add(i,a+b);}
 		}
 		return list;
 	}
