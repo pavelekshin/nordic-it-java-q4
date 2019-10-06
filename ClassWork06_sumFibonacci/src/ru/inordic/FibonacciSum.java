@@ -42,10 +42,10 @@ public class FibonacciSum {
 
 		// TODO ArrayList
 		int Farrlist = 0;
-		
-		Farrlist = FarrList(n).get(n-1) + FarrList(n).get(n-2);
+
+		Farrlist = FarrList(n).get(n - 1) + FarrList(n).get(n - 2);
 		System.out.println("Функция FarrList: " + FarrList(n));
-		System.out.println("Функция Farrlist sum: " +Farrlist);
+		System.out.println("Функция Farrlist sum: " + Farrlist);
 
 	}
 
@@ -70,7 +70,7 @@ public class FibonacciSum {
 		return arr;
 	}
 
-	public static ArrayList<Integer> FarrList (int n) {
+	public static ArrayList<Integer> FarrList(int n) {
 
 		ArrayList<Integer> list = new ArrayList<Integer>(n);
 
@@ -78,9 +78,10 @@ public class FibonacciSum {
 			if (i <= 0 || i == 1)
 				list.add(i);
 			else {
-				var a = list.get(i-1);
-				var b = list.get(i-2);
-				list.add(i,a+b);}
+				var a = list.get(i - 1);
+				var b = list.get(i - 2);
+				list.add(i, a + b);
+			}
 		}
 		return list;
 	}
