@@ -98,7 +98,7 @@ public class FibonacciSum {
 	}
 	
 	public static int getArraySumF(int[] arr, int index) {
-		return (arr[index-1] + arr[index-2]);
+		return arr[index-1] + arr[index-2];
 	}
 
 
