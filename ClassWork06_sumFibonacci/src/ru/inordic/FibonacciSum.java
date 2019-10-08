@@ -35,16 +35,16 @@ public class FibonacciSum {
 
 		// TODO Array
 		int Farrsum = 0;
-		int Farrsum2 = 0;
+		int arraySumF = 0;
 
 		Farrsum = getArrayElement(Farr(n), n - 1) + getArrayElement(Farr(n), n - 2);
 		
-		Farrsum2 = getArraySumF(Farr(n),n);
+		arraySumF = getArraySumF(Farr(n),n);
 
 
 		System.out.println("Функция Farr: " + Arrays.toString(Farr(n)));
 		System.out.println("Функция Farrsum: " + Farrsum);
-		System.out.println("Функция Farrsum2: " + Farrsum2);
+		System.out.println("Функция arraySumF: " + arraySumF);
 
 
 		// TODO ArrayList
