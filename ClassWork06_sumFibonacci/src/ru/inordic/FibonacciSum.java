@@ -38,7 +38,6 @@ public class FibonacciSum {
 		int arraySumF = 0;
 
 		Farrsum = getArrayElement(Farr(n), n - 1) + getArrayElement(Farr(n), n - 2);
-
 		arraySumF = getArraySumF(Farr(n), n);
 
 		System.out.println("Функция Farr: " + Arrays.toString(Farr(n)));
