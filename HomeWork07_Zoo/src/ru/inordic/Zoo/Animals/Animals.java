@@ -16,17 +16,34 @@ public abstract class Animals {
 		Wolf wolf = new Wolf();
 
 		tiger.say();
-		tiger.setName("Leva");
-		System.out.println(tiger.getName());
+		tiger.setName("Simba");
 		tiger.setAge(10);
-		System.out.println(tiger.getAge());
 		tiger.setPower(20);
+		
+		elephant.say();
+		elephant.setName("Dambo");
+		elephant.setAge(20);
+		elephant.setPower(20);
+		
+		horse.say();
+		horse.setName("Pegas");
+		horse.setAge(15);
+		horse.setPower(3);
+		
+		rabbit.say();
+		rabbit.setName("Bucks Bunny");
+		rabbit.setAge(5);
+		rabbit.setPower(3);
+		
+		wolf.say();
+		wolf.setName("Gray wolf");
+		wolf.setAge(7);
+		wolf.setPower(9);
+		
+		System.out.println(tiger.getName());
+		System.out.println(tiger.getAge());
 		System.out.println(tiger.getPower());
 
-		elephant.say();
-		rabbit.say();
-		wolf.say();
-		horse.say();
 	}
 
 	public String getName() {
