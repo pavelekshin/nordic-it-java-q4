@@ -38,21 +38,23 @@ public class FibonacciSum {
 		int arraySumF = 0;
 
 		Farrsum = getArrayElement(Farr(n), n - 1) + getArrayElement(Farr(n), n - 2);
-		
-		arraySumF = getArraySumF(Farr(n),n);
 
+		arraySumF = getArraySumF(Farr(n), n);
 
 		System.out.println("Функция Farr: " + Arrays.toString(Farr(n)));
 		System.out.println("Функция Farrsum: " + Farrsum);
 		System.out.println("Функция arraySumF: " + arraySumF);
 
-
 		// TODO ArrayList
 		int Farrlist = 0;
+		int getListSumF =0;
 
 		Farrlist = FarrList(n).get(n - 1) + FarrList(n).get(n - 2);
+		getListSumF = getListSumF(FarrList(n),n);
+		
 		System.out.println("Функция FarrList: " + FarrList(n));
 		System.out.println("Функция Farrlist sum: " + Farrlist);
+		System.out.println("Функция getListSumF: " + getListSumF);
 
 	}
 
@@ -96,10 +98,14 @@ public class FibonacciSum {
 	public static int getArrayElement(int[] arr, int index) {
 		return arr[index];
 	}
-	
+
 	public static int getArraySumF(int[] arr, int index) {
-		return arr[index-1] + arr[index-2];
+		return arr[index - 1] + arr[index - 2];
 	}
 
-
+	public static int getListSumF(ArrayList<Integer> arr, int index) {
+		int a = arr.get(index-1);
+		int b = arr.get(index-2);
+		return a + b;
+	}
 }
