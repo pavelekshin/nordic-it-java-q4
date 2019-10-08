@@ -8,13 +8,13 @@ public abstract class Animals {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		Tiger tiger = new Tiger();
 		Elephant elephant = new Elephant();
 		Horse horse = new Horse();
 		Rabbit rabbit = new Rabbit();
 		Wolf wolf = new Wolf();
-		
+
 		tiger.say();
 		tiger.setName("Leva");
 		System.out.println(tiger.getName());
@@ -22,11 +22,10 @@ public abstract class Animals {
 		System.out.println(tiger.getAge());
 		tiger.setPower(20);
 		System.out.println(tiger.getPower());
-		
+
+		elephant.say();
 		rabbit.say();
-		
 		wolf.say();
-		
 		horse.say();
 	}
 
