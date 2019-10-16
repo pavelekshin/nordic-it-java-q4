@@ -6,4 +6,14 @@ public class Elephant extends Animals {
 		System.out.println("Uuuuuw-Uuuuuw");
 	};
 
+	public void color() {
+		System.out.println("Gray");
+	};
+	
+	 public boolean weigh(Animals anotherAnimals) {
+         int weightAdvantage = this.getWeight() > anotherAnimals.getWeight() ? 1 : 0;
+      
+         int score = weightAdvantage;
+         return score >= 1 ? true : false;
+     }
 }

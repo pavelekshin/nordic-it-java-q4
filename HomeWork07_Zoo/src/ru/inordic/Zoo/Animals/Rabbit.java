@@ -6,4 +6,8 @@ public class Rabbit extends Animals {
 		System.out.println("Hrum-hrum");
 	};
 
+	public void color() {
+		System.out.println("White");
+	};
+	
 }
