@@ -70,7 +70,7 @@ public abstract class Game {
 				p1++;
 			}
 		}
-		
+
 		for (String str : historyp2) {
 			for (char c : str.toCharArray()) {
 				p2++;
@@ -83,9 +83,9 @@ public abstract class Game {
 
 		if (score >= 2)
 			System.out.println("Player 1 win!");
-		else if (historyp1.size() == historyp2.size() && p1 == p2 )
+		else if (historyp1.size() == historyp2.size() && p1 == p2)
 			System.out.println("Tie!");
-		else  
+		else
 			System.out.println("Player 2 win!");
 	}
 
