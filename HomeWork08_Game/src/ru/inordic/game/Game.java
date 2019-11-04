@@ -6,12 +6,12 @@ import java.util.Scanner;
 import ru.inordic.game.Exceptions.ContainExceptions;
 import ru.inordic.game.Exceptions.InconsistInputExceptions;
 
-public abstract class Game {
+public class Game {
 
 	private static String turn = "first";
 
 	public static String getTurn() {
-		return turn;
+		return Game.turn;
 	}
 
 	public static void setTurn(String turn) {
