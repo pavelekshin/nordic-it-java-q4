@@ -18,18 +18,7 @@ public class Game {
 		Game.turn = turn;
 	}
 
-	public static boolean checkContains(String text, String gametext) {
-		for (int i = 0; i < text.length(); i++) {
-			int c = text.charAt(i);
-			int index = gametext.indexOf(c);
-			if (index < 0) {
-				return false;
-			}
-		}
-		return true;
-	}
-
-	public static void checkContainsTwo(String text, String gametext) throws InconsistInputExceptions {
+	public static void checkContains(String text, String gametext) throws InconsistInputExceptions {
 		for (int i = 0; i < text.length(); i++) {
 			int c = text.charAt(i);
 			int index = gametext.indexOf(c);
@@ -112,7 +101,7 @@ public class Game {
 				setTurn("second");
 			}
 			try {
-				checkContainsTwo(text, gametext);
+				checkContains(text, gametext);
 				// game
 				try {
 					checkHistory(historyp1, historyp2, text);
