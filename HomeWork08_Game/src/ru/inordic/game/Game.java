@@ -40,19 +40,14 @@ public abstract class Game {
 		}
 	}
 
-	public static void checkHistory(ArrayList<String> history, String text) throws ContainExceptions {
-		if (history.contains(text)) {
-			throw new ContainExceptions();
-		}
-		history.add(text);
-	}
-
 	public static int arrayLength(ArrayList<String> arr) {
-		int len = 0;
+		int index = 0;
 		for (String str : arr) {
-			len = str.length();
+			for (char c : str.toCharArray()) {
+				index++;
+			}
 		}
-		return len;
+		return index;
 	}
 
 	public static void checkHistory(ArrayList<String> historyp1, ArrayList<String> historyp2, String text)
@@ -71,10 +66,15 @@ public abstract class Game {
 		int p2 = 0;
 
 		for (String str : historyp1) {
-			p1 = str.length();
+			for (char c : str.toCharArray()) {
+				p1++;
+			}
 		}
+		
 		for (String str : historyp2) {
-			p2 = str.length();
+			for (char c : str.toCharArray()) {
+				p2++;
+			}
 		}
 
 		int numberOfWords = historyp1.size() > historyp2.size() ? 1 : 0;
@@ -83,7 +83,9 @@ public abstract class Game {
 
 		if (score >= 2)
 			System.out.println("Player 1 win!");
-		else
+		else if (historyp1.size() == historyp2.size() && p1 == p2 )
+			System.out.println("Tie!");
+		else  
 			System.out.println("Player 2 win!");
 	}
 
@@ -102,12 +104,12 @@ public abstract class Game {
 		int input_turn = 1;
 
 		while (!"".equals(text)) {
-			if (input_turn % 2 == 0) {
-				System.out.println("Player 2 turn: ");
-				setTurn("second");
-			} else {
+			if (input_turn % 2 != 0) {
 				System.out.println("Player 1 turn: ");
 				setTurn("first");
+			} else {
+				System.out.println("Player 2 turn: ");
+				setTurn("second");
 			}
 			try {
 				checkContainsTwo(text, gametext);
