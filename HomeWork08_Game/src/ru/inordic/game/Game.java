@@ -8,7 +8,8 @@ import ru.inordic.game.Exceptions.InconsistInputExceptions;
 
 public class Game {
 
-	private static String turn = "first";
+	static int input_turn = 1;
+	static String turn = "first";
 
 	public static String getTurn() {
 		return Game.turn;
@@ -78,6 +79,16 @@ public class Game {
 			System.out.println("Player 2 win!");
 	}
 
+	public static void changeTurn() {
+		if ((input_turn % 2) != 0) {
+			System.out.println("Player 1 turn: ");
+			setTurn("first");
+		} else {
+			System.out.println("Player 2 turn: ");
+			setTurn("second");
+		}
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -90,16 +101,7 @@ public class Game {
 		ArrayList<String> historyp1 = new ArrayList<String>();
 		ArrayList<String> historyp2 = new ArrayList<String>();
 
-		int input_turn = 1;
-
 		while (!"".equals(text)) {
-			if (input_turn % 2 != 0) {
-				System.out.println("Player 1 turn: ");
-				setTurn("first");
-			} else {
-				System.out.println("Player 2 turn: ");
-				setTurn("second");
-			}
 			try {
 				checkContains(text, gametext);
 				// game
@@ -107,15 +109,19 @@ public class Game {
 					checkHistory(historyp1, historyp2, text);
 				} catch (ContainExceptions e) {
 					System.out.println("You enter same word again!");
+					input_turn--;
 				}
 			} catch (InconsistInputExceptions e) {
 				System.out.println("Inconsist input!");
+				input_turn--;
 			}
 
 			input_turn++;
-			text = scanner.nextLine();
 
+			changeTurn();
+			text = scanner.nextLine();
 		}
+
 		System.out.println("Player 1 words: " + historyp1 + ", count words: " + historyp1.size() + ", length total: "
 				+ arrayLength(historyp1));
 		System.out.println("Player 2 words: " + historyp2 + ", count words: " + historyp2.size() + ", length total: "
