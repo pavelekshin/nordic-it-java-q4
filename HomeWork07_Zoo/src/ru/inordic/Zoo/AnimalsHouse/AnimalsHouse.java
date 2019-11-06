@@ -7,8 +7,6 @@ import java.util.Collections;
 import ru.inordic.Zoo.Animals.Animals;
 
 public class AnimalsHouse {
-	private ArrayList<Animals> animals = new ArrayList<Animals>(3);
-
 	private ArrayList<AnimalsHouse> animalsHouse;
 
  AnimalsHouse(int size) {
@@ -16,7 +14,7 @@ public class AnimalsHouse {
 	}
 
 	public void addToHouse(Animals anotherAnimals) {
-		animalsHouse.addAll((Collection<? extends AnimalsHouse>) anotherAnimals);
+		animalsHouse.addAll(anotherAnimals);
 	}
 
 	public void removeFromHouse(Animals anotherAnimals) {
