@@ -66,7 +66,8 @@ public class Game {
 				p2++;
 			}
 		}
-
+//TODO не учтены все сценарии
+		
 		int numberOfWords = historyp1.size() > historyp2.size() ? 1 : 0;
 		int numberOfSymbols = p1 > p2 ? 1 : 0;
 		int score = numberOfWords + numberOfSymbols;
