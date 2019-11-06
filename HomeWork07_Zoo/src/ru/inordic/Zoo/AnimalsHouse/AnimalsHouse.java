@@ -7,6 +7,7 @@ import java.util.Collections;
 import ru.inordic.Zoo.Animals.Animals;
 
 public class AnimalsHouse {
+	private ArrayList<Animals> animals;
 	private ArrayList<AnimalsHouse> animalsHouse;
 
  AnimalsHouse(int size) {
