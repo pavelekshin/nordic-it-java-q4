@@ -7,7 +7,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ThreadApplication {
 
 	public static void main(String[] args) throws InterruptedException {
-
+		
+		
 		AtomicInteger count = new AtomicInteger();
 		ArrayList<Thread> tasks = new ArrayList<Thread>();
 
