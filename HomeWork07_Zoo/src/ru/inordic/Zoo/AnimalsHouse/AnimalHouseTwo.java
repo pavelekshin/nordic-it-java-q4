@@ -24,7 +24,7 @@ public class AnimalHouseTwo {
 
 		public void printHouse() {
 			for (var i : animals) {
-				System.out.println(i.getName());
+				System.out.println(i.getName() + " " + i.getAge());
 			}
 			System.out.println("The current size of house: "+ animals.size());
 			System.out.println("The max size of house " + size);

@@ -15,7 +15,7 @@ public class AnimalsHouse {
 	}
 
 	public void addToHouse(Animals anotherAnimals) {
-		animalsHouse.addAll(anotherAnimals);
+	//	Collections.addAll(anotherAnimals,animalsHouse);
 	}
 
 	public void removeFromHouse(Animals anotherAnimals) {

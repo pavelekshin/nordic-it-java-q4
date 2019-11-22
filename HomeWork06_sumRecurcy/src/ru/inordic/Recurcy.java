@@ -18,7 +18,7 @@ public class Recurcy {
 
 	}
 
-	public static int Recurcy(int n) {
+	public static int Recurcy (int n) {
 		if (n == 0 || n == 1)
 			return 1;
 		return n * Recurcy(n - 1);

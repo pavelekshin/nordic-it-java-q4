@@ -15,7 +15,6 @@ public class FibonacciSum {
 		scanner.close();
 
 		int[] arr = new int[n];
-
 		int sum = 0;
 
 		for (int i = 0; i < n; i++) {
@@ -101,7 +100,7 @@ public class FibonacciSum {
 	public static int getArraySumF(int[] arr, int index) {
 		return arr[index - 1] + arr[index - 2];
 	}
-
+	
 	public static int getListSumF(ArrayList<Integer> arr, int index) {
 		int a = arr.get(index - 1);
 		int b = arr.get(index - 2);
