@@ -75,6 +75,7 @@ public class Application {
 
 			cleaningWork.start();
 			cleaningWork.join();
+			
 		}
 	}
 }
