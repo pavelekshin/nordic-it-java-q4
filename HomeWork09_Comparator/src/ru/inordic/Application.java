@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Application {
-
-	public static void main (String[] args) {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList<String> word = new ArrayList<String>();
 		Scanner scanner = new Scanner(System.in);
