@@ -10,6 +10,7 @@ public class IntWrapper {
 
 	public int getCount() {
 		return count;
+	
 		
 	}
 }
