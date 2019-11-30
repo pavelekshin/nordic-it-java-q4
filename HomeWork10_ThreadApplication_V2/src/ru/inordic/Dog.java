@@ -2,7 +2,6 @@ package ru.inordic;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-
 public class Dog extends Application implements Runnable {
 
 	private int number;

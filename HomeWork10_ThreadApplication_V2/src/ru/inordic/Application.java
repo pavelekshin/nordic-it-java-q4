@@ -35,7 +35,7 @@ public class Application {
 
 			Thread threadCleaningWork = new Thread(new cleaningWork());
 			threadCleaningWork.start();
-			cleaningWork.appPool.add(threadCleaningWork);
+			cleaningWork.cleaningWorkPool.add(threadCleaningWork);
 			
 		}
 		cleaningWork.endThread();

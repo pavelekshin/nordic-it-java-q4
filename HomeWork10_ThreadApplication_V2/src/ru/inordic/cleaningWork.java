@@ -4,8 +4,7 @@ import java.util.ArrayList;
 
 public class cleaningWork extends Application implements Runnable {
 	
-	static ArrayList<Thread> appPool = new ArrayList<Thread>();
-
+	static ArrayList<Thread> cleaningWorkPool = new ArrayList<Thread>();
 
 	@Override
 	public void run() {
@@ -20,7 +19,7 @@ public class cleaningWork extends Application implements Runnable {
 	}
 	
 	public static void endThread() throws InterruptedException {
-		for (var task : appPool) {
+		for (var task : cleaningWorkPool) {
 			task.join();
 		}
 	}
