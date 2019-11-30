@@ -14,16 +14,13 @@ public class Application {
 
 		ArrayList<Thread> catsTasks = new ArrayList<Thread>();
 		ArrayList<Thread> cowTasks = new ArrayList<Thread>();
+		ArrayList<Thread> appPool = new ArrayList<Thread>();
 
 		for (int j = 0; j < 20; j++) {
+			System.out.println('\n' + "Iteration : " + j + '\n');
 			for (int i = 0; i < 2; i++) {
-				Thread thread = new Thread(new Runnable() {
-					public void run() {
-						catsCount.getAndIncrement();
-						processCount.getAndIncrement();
-						System.out.println("Cats eating!");
-					}
-				});
+				Thread thread = new Thread(new Cats(catsCount.getAndIncrement()));
+				processCount.getAndIncrement();
 				thread.start();
 				catsTasks.add(thread);
 			}
@@ -74,8 +71,11 @@ public class Application {
 			});
 
 			cleaningWork.start();
-			cleaningWork.join();
-			
+			appPool.add(cleaningWork);
+		}
+
+		for (var tasks : appPool) {
+			tasks.join();
 		}
 	}
 }
