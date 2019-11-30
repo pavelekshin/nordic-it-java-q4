@@ -15,7 +15,7 @@ public class Dog extends Application implements Runnable {
 
 	@Override
 	public void run() {
-		System.out.println("Cats eating! " + number);
+		System.out.println("Dogs eating! " + number);
 		processCount.getAndIncrement();
 	}
 	

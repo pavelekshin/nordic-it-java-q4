@@ -21,6 +21,7 @@ public class Application {
 			Cats.endThread();
 
 			Thread threadDog = new Thread(new Dog(Dog.dogCount.getAndIncrement()));
+
 			threadDog.start();
 			threadDog.join();
 
@@ -32,10 +33,11 @@ public class Application {
 
 			Cow.endThread();
 
-			Thread cleaningWork = new Thread(new cleaningWork());
-			cleaningWork.start();
-			cleaningWork.join();
-
+			Thread threadCleaningWork = new Thread(new cleaningWork());
+			threadCleaningWork.start();
+			cleaningWork.appPool.add(threadCleaningWork);
+			
 		}
+		cleaningWork.endThread();
 	}
 }

@@ -16,7 +16,7 @@ public class Cow extends Application implements Runnable {
 
 	@Override
 	public void run() {
-		System.out.println("Cats eating! " + number);
+		System.out.println("Cows eating! " + number);
 		processCount.getAndIncrement();
 	}
 
