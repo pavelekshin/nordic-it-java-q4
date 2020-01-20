@@ -58,6 +58,4 @@ public class PrimeNumberTests {
 		boolean result = PrimeNumber.checkPrime(-5);
 		assertThat(result).isFalse();
 	}
-	
-	
 }

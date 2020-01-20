@@ -1,7 +1,7 @@
 package com.example.homework26.homework26;
 
 public class PrimeNumber {
-	public static boolean checkPrime(Integer i) {
+	public static boolean checkPrime(int i) {
 		if (i <= 1)
 			return false;
 		else if (i <= 3)
