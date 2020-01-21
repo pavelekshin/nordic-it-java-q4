@@ -21,7 +21,7 @@ public class Homework26Application implements CommandLineRunner {
 		System.out.println("Enter the string");
 		Scanner scanner = new Scanner(System.in);
 		Integer text = scanner.nextInt();
-		
+
 		System.out.println(PrimeNumber.checkPrime(text));
 	}
 }

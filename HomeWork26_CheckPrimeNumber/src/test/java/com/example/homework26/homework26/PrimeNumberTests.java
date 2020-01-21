@@ -10,35 +10,35 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
 public class PrimeNumberTests {
-	
+
 	@Test
 	@DisplayName("Проверка на простое null")
 	public void isFalsePrimeNumberTestNull() {
 		boolean result = PrimeNumber.checkPrime(null);
 		assertThat(result).isFalse();
 	}
-	
+
 	@Test
 	@DisplayName("Проверка на простое числа 5")
 	public void isTruePrimeNumberTest1() {
 		boolean result = PrimeNumber.checkPrime(5);
 		assertThat(result).isTrue();
 	}
-	
+
 	@Test
 	@DisplayName("Проверка на простое числа 3")
 	public void isTruePrimeNumberTest2() {
 		boolean result = PrimeNumber.checkPrime(3);
 		assertThat(result).isTrue();
 	}
-	
+
 	@Test
 	@DisplayName("Проверка на простое числа 191")
 	public void isTruePrimeNumberTest5() {
 		boolean result = PrimeNumber.checkPrime(191);
 		assertThat(result).isTrue();
 	}
-	
+
 	@Test
 	@DisplayName("Проверка на простое числа 3571")
 	public void isTruePrimeNumberTest3571() {
@@ -52,7 +52,7 @@ public class PrimeNumberTests {
 		boolean result = PrimeNumber.checkPrime(0);
 		assertThat(result).isFalse();
 	}
-	
+
 	@Test
 	@DisplayName("Проверка на простое отрицательного числа -5")
 	public void isFalsePrimeNumberTestNegative() {
