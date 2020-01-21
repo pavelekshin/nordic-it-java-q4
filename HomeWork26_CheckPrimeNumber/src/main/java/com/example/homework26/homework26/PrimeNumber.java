@@ -3,10 +3,12 @@ package com.example.homework26.homework26;
 //
 
 public class PrimeNumber {
-	public static boolean checkPrime(int i) {
+	public static boolean checkPrime(Integer i) {
+		if (i == null)
+			return false;
 		if (i <= 1)
 			return false;
-		else if (i <= 3)
+		if (i <= 3)
 			return true;
 		else if (i % 2 == 0 || i % 3 == 0)
 			return false;
